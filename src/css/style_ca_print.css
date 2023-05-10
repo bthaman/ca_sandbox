@@ -1,0 +1,137 @@
+body {
+  background: white;
+  font: 12px Arial, sans-serif;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h1 {
+  color: darkslategray;
+  font: 18px Arial;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+p {
+  color: black;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.pagebreak {
+  page-break-before: always;
+  min-height: 1px;
+}
+.newpage {
+  margin-top: 25px;
+}
+.centerdiv {
+  /*float: left;*/
+  position: relative;
+  left: 50%;
+  width: 600px;
+  transform: translateX(-50%);
+}
+.imagediv {
+  /*float: left;*/
+  position: relative;
+  left: 50%;
+  width: 470px;
+  transform: translateX(-50%);
+  margin-top: 25px;
+}
+table {
+  border-collapse: collapse;
+  width: 460px;
+  border: 3px solid darkslategray;
+  background-color: whitesmoke;
+  table-layout: fixed;
+}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0;
+  background-color: white;
+  table-layout: fixed;
+  margin: 0 10px 0 10px;
+}
+th, td {
+  border: 1px solid darkgray;
+  height: 25px;
+  padding: 0 5px 0 5px;
+}
+tr, td {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+tr.noborder, td.noborder {
+  border: 0;
+}
+td {
+  font: 10px Arial;
+}
+th {
+  background-color: steelblue;
+  font: 12px Arial;
+  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid darkslategray;
+}
+thead tr th:nth-child(1) {
+  width: 29%;
+}
+thead tr th:nth-child(2) {
+  width: 12%;
+}
+thead tr th:nth-child(3) {
+  width: 49%;
+}
+thead tr th:nth-child(4) {
+  width: 10%;
+}
+thead {
+  display: table-header-group;
+}
+img {
+  /*margin-top: 10px;
+  margin-bottom: 10px;*/
+  display: inline;
+  margin: 0 0 10px 0;
+}
+img.nomargin {
+  margin: 0 0 0 0;
+}
+td.selected {
+  background-color: lightsteelblue;
+  color: steelblue;
+  font-weight: bold;
+}
+td.notselected {
+  color: black;
+}
+tr.highest {
+  border-top: 2px solid darkslategray;
+}
+td.weighted_score {
+  font-weight: bold;
+}
+/* Items that should not show up on the printed version */
+/* Horizontal line between pages */
+hr {
+  border: 0;
+}
+#attributes {
+  display: inline-block;
+  border-radius: 15px;
+  border: 2px solid darkslategray;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+/* div tag holding the print button href */
+#print-button {
+  display: none;
+}
+/* @page{size:auto; margin:0mm;} removes the date and
+title header when printing */
+@page{size:auto; margin:0mm;}
