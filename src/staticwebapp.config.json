@@ -3,6 +3,16 @@
         {
             "route": "/CA_*.html",
             "serve": "/CA_{*}.html"
+        },
+        {
+            "route": "/*",
+            "allowedRoles": ["authenticated"]
         }
-    ]
+    ],
+    "responseOverrides": {
+        "401": {
+            "statusCode": 302,
+            "redirect": "/.auth/login/aad"
+        }
+    }
 }
