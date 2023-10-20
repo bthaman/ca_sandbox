@@ -3,10 +3,6 @@
         {
             "route": "/CA_*.html",
             "serve": "/CA_{*}.html"
-        },
-        {
-            "route": "/*",
-            "allowedRoles": ["authenticated"]
         }
     ]
 }
